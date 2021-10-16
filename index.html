@@ -1,1 +1,175 @@
-hello worldd
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1/dist/tailwind.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@1.14.0/dist/full.css" rel="stylesheet" type="text/css" />
+
+    <link rel="icon" href="assets/img/fokusinbelajarsmall.png">
+    <title>Fokusin Belajar</title>
+</head>
+
+
+<body>
+
+
+    <!-- Navbar goes here -->
+
+    <nav class="flex items-center justify-between flex-wrap bg-gray-200 p-4 fixed w-full z-10 top-0">
+        <div class="flex items-center flex-shrink-0 text-white mr-6">
+            <a class="text-white no-underline hover:text-white hover:no-underline" href="#">
+                <img src="assets/img/fokusinbelajarsmall.png" alt="Logo" style="margin-right:20px;" />
+            </a>
+        </div>
+
+        <div class="block lg:hidden">
+            <button id="nav-toggle"
+                class="flex items-center px-3 py-2 border rounded text-green-500 border-green-600 hover:text-green hover:border-green">
+                <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <title>Menu</title>
+                    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+                </svg>
+            </button>
+        </div>
+
+        <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block pt-6 lg:pt-0" id="nav-content">
+            <ul class="list-reset lg:flex justify-end flex-1 items-center">
+                <li class="mr-3">
+                    <a class="inline-block py-2 px-4 text-green-500 no-underline font-semibold"
+                        href="index.html">Home</a>
+                </li>
+                <li class="mr-3">
+                    <div @click.away="open = false" class="relative" x-data="{ open: false }">
+                        <button @click="open = !open"
+                            class="inline-block text-gray-600 no-underline py-2 px-4 font-semibold">
+                            <span>Courses</span>
+                            <svg fill="currentColor" viewBox="0 0 20 20"
+                                :class="{'rotate-180': open, 'rotate-0': !open}"
+                                class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
+                                <path fill-rule="evenodd"
+                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </button>
+                        <div x-show="open" x-transition:enter="transition ease-out duration-100"
+                            x-transition:enter-start="transform opacity-0 scale-95"
+                            x-transition:enter-end="transform opacity-100 scale-100"
+                            x-transition:leave="transition ease-in duration-75"
+                            x-transition:leave-start="transform opacity-100 scale-100"
+                            x-transition:leave-end="transform opacity-0 scale-95"
+                            class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg z-10">
+                            <div class="px-2 py-2 bg-white rounded-md shadow">
+                                <a class="block px-4 py-2 mt-2 text-sm font-semibold rounded-lg hover:bg-gray-200"
+                                    href="singlecourses.html">Single Courses</a>
+                                <!-- KALO LAGI AKTIF TAMBAHIN BG GRAY SAMA TEXT GREEN-->
+                                <a class="block px-4 py-2 mt-2 text-sm font-semibold rounded-lg hover:bg-gray-200"
+                                    href="multicourses.html">Multi Course</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="mr-3">
+                    <div @click.away="open = false" class="relative" x-data="{ open: false }">
+                        <button @click="open = !open"
+                            class="inline-block text-gray-600 no-underline py-2 px-4 font-semibold">
+                            <span>Article</span>
+                            <svg fill="currentColor" viewBox="0 0 20 20"
+                                :class="{'rotate-180': open, 'rotate-0': !open}"
+                                class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
+                                <path fill-rule="evenodd"
+                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </button>
+                        <div x-show="open" x-transition:enter="transition ease-out duration-100"
+                            x-transition:enter-start="transform opacity-0 scale-95"
+                            x-transition:enter-end="transform opacity-100 scale-100"
+                            x-transition:leave="transition ease-in duration-75"
+                            x-transition:leave-start="transform opacity-100 scale-100"
+                            x-transition:leave-end="transform opacity-0 scale-95"
+                            class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg z-10">
+                            <div class="px-2 py-2 bg-white rounded-md shadow">
+                                <a class="block px-4 py-2 mt-2 text-sm font-semibold rounded-lg hover:bg-gray-200"
+                                    href="article.html">Article</a>
+                                <a class="block px-4 py-2 mt-2 text-sm font-semibold rounded-lg hover:bg-gray-200"
+                                    href="ebook.html">E-book</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="mr-3">
+                    <div @click.away="open = false" class="relative" x-data="{ open: false }">
+                        <button @click="open = !open"
+                            class="inline-block text-gray-600 no-underline py-2 px-4 font-semibold">
+                            <span>About</span>
+                            <svg fill="currentColor" viewBox="0 0 20 20"
+                                :class="{'rotate-180': open, 'rotate-0': !open}"
+                                class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
+                                <path fill-rule="evenodd"
+                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </button>
+                        <div x-show="open" x-transition:enter="transition ease-out duration-100"
+                            x-transition:enter-start="transform opacity-0 scale-95"
+                            x-transition:enter-end="transform opacity-100 scale-100"
+                            x-transition:leave="transition ease-in duration-75"
+                            x-transition:leave-start="transform opacity-100 scale-100"
+                            x-transition:leave-end="transform opacity-0 scale-95"
+                            class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg z-10">
+                            <div class="px-2 py-2 bg-white rounded-md shadow">
+                                <a class="block px-4 py-2 mt-2 text-sm font-semibold rounded-lg hover:bg-gray-200"
+                                    href="ourplatform.html">Our Platform</a>
+                                <a class="block px-4 py-2 mt-2 text-sm font-semibold rounded-lg hover:bg-gray-200"
+                                    href="founder.html">Founder</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="mr-3">
+                    <a href="login.html"
+                        class="bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-orange-500 text-white font-semibold px-5 py-2 rounded-md mt-2">
+                        Login
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <br>
+    <br>
+
+
+
+
+
+    <br>
+    <br>
+
+
+    <br>
+    <footer>
+
+        <p class="text-center bg-gray-700 text-white py-4 font-mono"> &copy;2021 Fokusin Belajar Team</p>
+
+    </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <script>
+        //Javascript to toggle the menu
+        document.getElementById('nav-toggle').onclick = function () {
+            document.getElementById("nav-content").classList.toggle("hidden");
+        }
+
+    </script>
+</body>
+
+</html>

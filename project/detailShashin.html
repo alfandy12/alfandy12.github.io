@@ -23,7 +23,7 @@
 
         <div class="block lg:hidden">
             <button id="nav-toggle"
-                class="flex items-center px-3 py-2 border rounded text-green-500 border-green-600 hover:text-green hover:border-green">
+                class="flex items-center px-3 py-2 border rounded text-purple-500 border-purple-600 hover:text-purple hover:border-purple">
                 <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                     <title>Menu</title>
                     <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
@@ -34,10 +34,10 @@
         <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block pt-6 lg:pt-0" id="nav-content">
             <ul class="list-reset lg:flex justify-end flex-1 items-center">
                 <li class="mr-3">
-                    <a class="inline-block py-2 px-4 hover:from-green-400 hover:from-pink-500 hover:to-yellow-500 text-white no-underline font-semibold bg-gradient-to-r from-green-400 to-blue-500 rounded-md"
+                    <a class="inline-block py-2 px-4 hover:from-green-400 hover:from-pink-500 hover:to-yellow-500 text-white no-underline font-semibold bg-gradient-to-r from-green-400 to-blue-500 rounded-md "
                         href="javascript:history.back()">Go Back</a>
                 </li>
-               
+
             </ul>
         </div>
     </nav>
@@ -49,7 +49,7 @@
 
     <div class="">
         <h3 class="text-center font-bold text-purple-500 text-3xl my-4">Shashin Picture</h3>
-        <img src="projectIMG/shashin.png" alt="" class="h-80 block mx-auto">
+        <img src="projectIMG/shashin.png" alt="" class="h-40 lg:h-96 block mx-auto">
     </div>
     <div class="collapse w-11/12 border rounded-box border-base-300 collapse-arrow mx-auto mt-4">
         <input type="checkbox">
@@ -57,18 +57,44 @@
             Link
         </div>
         <div class="collapse-content">
-            <p><a href="http://shashin.infinityfreeapp.com" target="_blank" rel="noopener noreferrer" class="font-bold">Shashin Picture</a>
+            <p><a href="http://shashin.infinityfreeapp.com" target="_blank" rel="noopener noreferrer"
+                    class="font-bold">Shashin Picture</a>
             </p>
         </div>
     </div>
     <div class="collapse w-11/12 border rounded-box border-base-300 collapse-arrow mx-auto mt-2">
         <input type="checkbox">
         <div class="collapse-title text-xl font-medium">
-            Deskripsi
+            Description
         </div>
         <div class="collapse-content">
-            <p><a href="http://shashin.infinityfreeapp.com" target="_blank" rel="noopener noreferrer" class="font-bold">Shashin Picture. </a>Project ini di buat dengan tujuan untuk photographer, desainer, atau apapun yang berkaitan dengan gambar untuk ditampilkan hasil karyanya.
+            <p class="text-justify"><a href="http://shashin.infinityfreeapp.com" target="_blank" rel="noopener noreferrer"
+                    class="font-bold">Shashin Picture. </a>This project was created with the aim of being a
+                photographer, designer, or anything related to images to display their work.
             </p>
+        </div>
+    </div>
+    <div class="collapse w-11/12 border rounded-box border-base-300 collapse-arrow mx-auto mt-4">
+        <input type="checkbox">
+        <div class="collapse-title text-xl font-medium">
+            Fitur
+        </div>
+        <div class="collapse-content">
+            <h3 class="font-semibold">Tools</h3>
+            <ul class="list-disc ml-4">
+                <li>Html</li>
+                <li>CSS</li>
+                <li>Bootstrap 5</li>
+                <li>Codeigniter 3</li>
+            </ul>
+            <h3 class="font-semibold">Fitur</h3>
+            <ul class="list-disc ml-4">
+                <li>Auth login 2 user role. (admin & user)</li>
+                <li>Admin CRUD image from Gdrive and copylink(so as not to fill the storage on the hosting)</li>
+                <li>Profile</li>
+                <li>edit profile including change password</li>
+            </ul>
+            </a>
         </div>
     </div>
 

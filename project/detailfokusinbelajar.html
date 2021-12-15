@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1/dist/tailwind.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@1.14.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <title>Alfandy Afriandani</title>
+</head>
+
+
+<body>
+    <!-- Navbar goes here -->
+
+    <nav class="flex items-center justify-between flex-wrap bg-gray-200 p-4 fixed w-full z-50 top-0">
+        <div class="flex items-center flex-shrink-0 text-white mr-6">
+            <a class="text-white no-underline font-mono font-bold text-2xl text-purple-500" href="#">
+                AlfandyA
+            </a>
+        </div>
+
+        <div class="block lg:hidden">
+            <button id="nav-toggle"
+                class="flex items-center px-3 py-2 border rounded text-purple-500 border-purple-600 hover:text-purple hover:border-purple">
+                <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <title>Menu</title>
+                    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+                </svg>
+            </button>
+        </div>
+
+        <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block pt-6 lg:pt-0" id="nav-content">
+            <ul class="list-reset lg:flex justify-end flex-1 items-center">
+                <li class="mr-3">
+                    <a class="inline-block py-2 px-4 hover:from-green-400 hover:from-pink-500 hover:to-yellow-500 text-white no-underline font-semibold bg-gradient-to-r from-green-400 to-blue-500 rounded-md "
+                        href="javascript:history.back()">Go Back</a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+    <br>
+    <br>
+    <br>
+
+
+
+    <div class="">
+        <h3 class="text-center font-bold text-purple-500 text-3xl my-4">Fokusin Belajar</h3>
+        <img src="projectIMG/fokusinbelajar.png" alt="" class="h-40 lg:h-96 block mx-auto">
+    </div>
+    <div class="collapse w-11/12 border rounded-box border-base-300 collapse-arrow mx-auto mt-4">
+        <input type="checkbox">
+        <div class="collapse-title text-xl font-medium">
+            Link
+        </div>
+        <div class="collapse-content">
+            <p><a href="http://fokusinbelajar.ga/" target="_blank" rel="noopener noreferrer"
+                    class="font-bold">Fokusin Belajar</a>
+            </p>
+        </div>
+    </div>
+    <div class="collapse w-11/12 border rounded-box border-base-300 collapse-arrow mx-auto mt-2">
+        <input type="checkbox">
+        <div class="collapse-title text-xl font-medium">
+            Description
+        </div>
+        <div class="collapse-content">
+            <p class="text-justify"><a href="http://fokusinbelajar.ga/" target="_blank"
+                    rel="noopener noreferrer" class="font-bold">Fokusin Belajar. </a>Website ini dibuat sebagai project pkl, pada saat itu dikarenakan dengan adanya pandemi covid-19 jadi PKL di tiadakan namun PKL tetap di laksanakan dengan mengerjakan projek yang berkaitan dengan jurusan sebagai penentuan pelulusan. lalu kelompok kami memutuskan untuk membuat website belajar dengan sistem materi video yang sudah kami pilihkan dan akan di tampilkan di website.
+            </p>
+        </div>
+    </div>
+    <div class="collapse w-11/12 border rounded-box border-base-300 collapse-arrow mx-auto mt-4">
+        <input type="checkbox">
+        <div class="collapse-title text-xl font-medium">
+            Fitur
+        </div>
+        <div class="collapse-content">
+            <h3 class="font-semibold">Tools</h3>
+            <ul class="list-disc ml-4">
+                <li>Codeigniter 3</li>
+                <li>Bootstrap 5</li>
+                <li>Templating from Colorlib</li>
+                <li>Javascript</li>
+                <li>Database MySql</li>
+            </ul>
+            <h3 class="font-semibold">Fitur</h3>
+            <ul class="list-disc ml-4">
+                <li>Login User dan Admin</li>
+                <li>Verif Emaill Forgot Password</li>
+                <li>My Profile dan Edit Profile</li>
+                <li>CRUD untuk Content</li>
+                <li>CRUD untuk Account admin</li>
+            </ul>
+            </a>
+        </div>
+    </div>
+
+    <br>
+    <br>
+
+
+    <br>
+    <footer>
+
+        <p class="text-center bg-gray-500 text-white py-4 font-mono"> &copy;2021 Alfandy Afriandani</p>
+    </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <script>
+        //Javascript to toggle the menu
+        document.getElementById('nav-toggle').onclick = function () {
+            document.getElementById("nav-content").classList.toggle("hidden");
+        }
+
+    </script>
+</body>
+
+</html>
